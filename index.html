@@ -550,6 +550,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciativas do Time de ID</title>
+    <link rel="icon" type="image/png" href="imagens/mascote.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
@@ -648,10 +649,39 @@ h2.slide-title {
 #slide2 .slide-title {
     margin-bottom: 12px;
 }
-#slide4 .slide-title {
+#slide4 .slide-title,
+#slide5 .slide-title,
+#slide5b .slide-title,
+#slide6 .slide-title,
+#slide6b .slide-title,
+#slide7 .slide-title,
+#slide8 .slide-title,
+#slide9 .slide-title {
     margin-bottom: 12px;
 }
-#slide4 .content-area {
+#slide7 .content-area,
+#slide8 .content-area,
+#slide9 .content-area {
+    justify-content: flex-start;
+}
+#slide7 .content-area p,
+#slide7 .content-area li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+#slide5 .content-area h3,
+#slide7 .content-area h3 {
+    margin-top: 16px;
+}
+#slide6 .content-area h3,
+#slide8 .content-area h3,
+#slide9 .content-area h3 {
+    margin-top: 24px;
+}
+#slide4 .content-area,
+#slide5 .content-area,
+#slide5b .content-area,
+#slide6b .content-area {
     justify-content: flex-start;
 }
 
@@ -686,6 +716,9 @@ li {
     justify-content: center;
     height: 100%;
     max-width: 800px;
+}
+#slide1 .title-layout {
+    max-width: 960px;
 }
 
 .title-layout .subtitle {
@@ -778,9 +811,26 @@ li {
     box-shadow: none;
     background: transparent;
     height: 570px;
+    transform: translateY(-7%);
 }
 #slide3 .image-wrapper img {
     object-fit: contain;
+}
+#slide6 .image-wrapper,
+#slide7 .image-wrapper,
+#slide7 .video-wrapper,
+#slide8 .image-wrapper {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+}
+#slide6 .image-wrapper img,
+#slide7 .image-wrapper img,
+#slide8 .image-wrapper img {
+    object-fit: contain;
+}
+#slide7 .video-wrapper iframe {
+    display: block;
 }
 #slide3 {
     padding-left: 66px;
@@ -1009,6 +1059,10 @@ li {
     box-shadow: 0 15px 35px rgba(249, 115, 22, 0.6);
 }
 
+.demo-link-btn:hover {
+    background: #0284c7;
+}
+
 .demo-link-container {
     background: rgba(30, 41, 59, 0.5);
     border: 2px dashed #334155;
@@ -1213,7 +1267,7 @@ li {
 <!-- Slide 7: DIA LD (Image Right) -->
 
 
-<!-- Slide 8: Destaques SAE (Highlight Numbers) -->
+<!-- Slide 8: Plataforma SAE Digital — Destaques de cada volume (iniciativa) -->
 
 
 <!-- Slide 9: O Papel da IA e Automação -->
@@ -1250,7 +1304,7 @@ li {
             <img src="imagens/mascote.png" alt="Mascote" class="mascote-icon" title="Olá! 👋" style="height: 60px; width: auto; display: block;">
             <span style="font-size: 24px; font-weight: 600; color: #fff;">- Interações Digitais</span>
         </div>
-        <h1>Iniciativas do time de ID que envolvem <span style="color: #f97316;">inovações</span>, <span style="color: #f97316;">automações</span> e <span style="color: #f97316;">IA</span></h1>
+        <h1>Iniciativas do time<br>de ID que envolvem<br> <span style="color: #f97316;">inovações</span>, <span style="color: #f97316;">automações</span> e <span style="color: #f97316;">IA</span></h1>
         <p class="subtitle">Transformando a educação através da tecnologia...</p>
     </div>
 </div><div class="slide-container" id="slide2">
@@ -1322,117 +1376,164 @@ li {
             </div>
         </div>
     </div>
-</div><div class="slide-container bleed-image-layout" id="slide5">
-    <div class="content-container">
-        <h2 class="slide-title">Dash Qualidade &amp; Revisão</h2>
-        <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
-            <h3>Visibilidade Total do Processo</h3>
-            <p>Uma ferramenta poderosa para o controle de qualidade editorial e técnico. O Dashboard oferece métricas em tempo real sobre o status de revisão de cada material.</p>
-            <p>Com automações inteligentes, reduzimos o erro humano e garantimos que o padrão SAE Digital seja mantido em escala, identificando gargalos antes que se tornem problemas.</p>
+</div><div class="slide-container" id="slide5">
+    <h2 class="slide-title">Dash Qualidade &amp; Revisão</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <h3>Resumo do projeto</h3>
+                <ul>
+                    <li><strong>Contexto:</strong> necessidade de mapear a qualidade das entregas de cada revisor e reduzir erros de revisão, garantindo que o material chegue ao usuário com a melhor qualidade.</li>
+                    <li><strong>Ação principal:</strong> criação de uma dashboard no Looker Studio para acompanhar as entregas e os principais indicadores de qualidade.</li>
+                    <li><strong>O que acompanhamos:</strong> evolução das entregas, categorias de erro mais recorrentes e níveis de criticidade em cada revisão.</li>
+                    <li><strong>Impacto esperado:</strong> cruzar disciplinas x revisores para identificar afinidades, reduzir retrabalho e diminuir a chance de inadequações.</li>
+                </ul>
+            </div>
+            <div class="image-wrapper" style="max-height: 380px; display: flex; flex-direction: column;">
+                <img src="https://corporater.com/wp-content/uploads/2021/07/kpis-dashboards-and-analytics-software-1a.png" alt="Dashboard de qualidade" style="width: 100%; height: auto; max-height: 320px; object-fit: contain;">
+                <p style="margin-top: 12px; font-size: 14px; color: #94a3b8; text-align: center;">Looker Studio — indicadores em tempo quase real.</p>
+            </div>
         </div>
     </div>
-    <div class="image-container">
-        <img class="bleed-image-side" alt="Modern data analytics dashboard on computer screen" src="https://corporater.com/wp-content/uploads/2021/07/kpis-dashboards-and-analytics-software-1a.png">
+</div><div class="slide-container" id="slide5b">
+    <h2 class="slide-title">Demonstração</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <h3>Acessar o dashboard</h3>
+                <p>Acompanhe em tempo quase real a evolução das entregas, categorias de erro e criticidade por revisão.</p>
+                <ul class="check-only" style="margin-top: 20px; list-style: none; padding-left: 0;">
+                    <li><i class="fa-solid fa-check" style="color:#f97316; margin-right: 10px;"></i> Acesso em tempo quase real</li>
+                    <li><i class="fa-solid fa-check" style="color:#f97316; margin-right: 10px;"></i> Por computador ou celular</li>
+                    <li><i class="fa-solid fa-check" style="color:#f97316; margin-right: 10px;"></i> Indicadores por revisor e disciplina</li>
+                </ul>
+            </div>
+            <div class="demo-link-container">
+                <p style="margin-bottom: 8px; font-size: 14px; color: #94a3b8;">Acesse pelo celular:</p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&amp;data=https%3A%2F%2Flookerstudio.google.com%2Freporting%2Fc78eff77-5149-4360-bbfc-ec8379763f70" alt="QR Code para Looker Studio" style="width: 180px; height: 180px; margin-bottom: 16px; background: #fff; padding: 8px; border-radius: 8px;">
+                <a href="https://lookerstudio.google.com/reporting/c78eff77-5149-4360-bbfc-ec8379763f70" target="_blank" class="demo-button">
+                    <i class="fa-solid fa-chart-line" style="margin-right: 10px;"></i> Acessar Dash
+                </a>
+                <p style="margin-top: 15px; font-size: 16px; color: #94a3b8;">Looker Studio</p>
+            </div>
+        </div>
     </div>
 </div><div class="slide-container" id="slide6">
     <h2 class="slide-title">Plataforma LD (Códigos)</h2>
     <div class="content-area">
-        <div class="two-column tiled">
+        <div class="two-column">
             <div>
-                <h3>Gestão de Acesso</h3>
-                <p>A espinha dorsal da entrega digital. A Plataforma LD gerencia a geração e validação de códigos de acesso para alunos e professores.</p>
-                <p style="margin-top: 20px;">Garante que o conteúdo certo chegue ao usuário certo, com segurança e rastreabilidade total.</p>
-            </div>
-            <div>
-                <h3>Inovação no Backend</h3>
-                <p>Integração com sistemas legados e novos microserviços. Focada em escalabilidade para suportar picos de acesso no início do ano letivo.</p>
-                <ul style="margin-top: 20px;">
-                    <li>Automação na geração de lotes.</li>
-                    <li>Redução de chamados de suporte.</li>
-                    <li>API robusta para parceiros.</li>
+                <h3>Resumo do projeto</h3>
+                <ul>
+                    <li><strong>O que é:</strong> ambiente único para consultar códigos e estruturas dos livros digitais, com filtros e visualização de como o código fica no livro.</li>
+                    <li><strong>Contexto:</strong> Livros digitais têm muitos códigos e estruturas. Precisávamos de um lugar para consultar e ver como cada código fica no livro. A Plataforma LD unificou as bibliotecas nesse ambiente.</li>
+                    <li><strong>Impacto:</strong> mais clareza, menos dúvidas, mais padronização e base única para vários livros; melhor qualidade na entrega dos frellas e melhor entendimento das estruturas e aplicações.</li>
+                    <li><strong>Próximos passos:</strong> finalizar alimentação com principais códigos, categorias e tags para uso pleno na produção da V4.</li>
                 </ul>
+            </div>
+            <div class="image-wrapper" style="max-height: 380px;">
+                <img src="imagens/codigosLD.PNG" alt="Plataforma LD" style="width: 100%; height: auto; max-height: 320px; object-fit: contain;">
+                <p style="margin-top: 12px; font-size: 14px; color: #94a3b8; text-align: center;">Evolução: documento → busca → interativa → Plataforma LD.</p>
+            </div>
+        </div>
+    </div>
+</div><div class="slide-container" id="slide6b">
+    <h2 class="slide-title">Demonstração</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <h3>Antes x Depois</h3>
+                <p>As 4 versões da evolução:</p>
+                <ul class="check-only" style="margin-top: 20px; list-style: none; padding-left: 0;">
+                    <li><i class="fa-solid fa-check" style="color:#f97316; margin-right: 10px;"></i> 1. <a href="https://docs.google.com/document/d/1zavQhmG1NMIiN_yZKyG4iG8_LjX4oKwe/edit?usp=drive_link&ouid=101049483993269590286&rtpof=true&sd=true" target="_blank" rel="noopener" style="color: #38bdf8; text-decoration: underline;">Documento estático</a></li>
+                    <li><i class="fa-solid fa-check" style="color:#f97316; margin-right: 10px;"></i> 2. <a href="https://luizsb.github.io/Codigos-LD/" target="_blank" rel="noopener" style="color: #38bdf8; text-decoration: underline;">Busca por texto</a></li>
+                    <li><i class="fa-solid fa-check" style="color:#f97316; margin-right: 10px;"></i> 3. <a href="https://naygracioliarco.github.io/codigos_interativos_LD/" target="_blank" rel="noopener" style="color: #38bdf8; text-decoration: underline;">Biblioteca interativa</a></li>
+                    <li><i class="fa-solid fa-check" style="color:#f97316; margin-right: 10px;"></i> 4. Plataforma LD (nova) — acesso ao lado</li>
+                </ul>
+            </div>
+            <div class="demo-link-container">
+                <p style="margin-bottom: 8px; font-size: 14px; color: #94a3b8;">Acesse pelo celular:
+
+                </p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&amp;data=https%3A%2F%2Fluizsb.github.io%2FBiblioteca_LD%2F" alt="QR Code Plataforma LD" style="width: 180px; height: 180px; margin-bottom: 16px; background: #fff; padding: 8px; border-radius: 8px;">
+                <a href="https://luizsb.github.io/Biblioteca_LD/" target="_blank" class="demo-button" id="link-plataforma-ld">
+                    <i class="fa-solid fa-code" style="margin-right: 10px;"></i> Acessar Plataforma LD
+                </a>
+                <p style="margin-top: 15px; font-size: 14px; color: #94a3b8;">Plataforma LD (nova)</p>
             </div>
         </div>
     </div>
 </div><div class="slide-container" id="slide7">
-    <h2 class="slide-title">DIA LD: Cultura de Inovação</h2>
+    <h2 class="slide-title">DIA LD</h2>
     <div class="content-area">
         <div class="two-column">
             <div>
-                <h3>Sinergia e Capacitação</h3>
-                <p>O <strong>DIA LD</strong> é mais que um evento; é um marco na cultura do time de ID. Um momento dedicado ao alinhamento sobre as tecnologias do Livro Digital.</p>
+                <h3>Resumo do projeto</h3>
+                <p style="margin-bottom: 8px; font-weight: 600;">Contexto e motivação</p>
                 <ul>
-                    <li><strong>Workshops Práticos:</strong> Mão na massa com novas ferramentas.</li>
-                    <li><strong>Troca de Conhecimento:</strong> Desenvolvedores e editorial falando a mesma língua.</li>
-                    <li><strong>Foco no Usuário:</strong> Como nossas decisões técnicas impactam a sala de aula.</li>
+                    <li>A criação de LDs varia por marca (extratores JSON + imagens, scripts no InDesign, ajustes manuais em HTML).</li>
+                    <li>Alto esforço operacional para produzir e manter LDs, em especial no padrão SAS.</li>
+                    <li>Dificuldade de escalar: é complexo encontrar pessoas capacitadas para terceirização.</li>
+                </ul>
+                <p style="margin-bottom: 8px; margin-top: 12px; font-weight: 600;">Ações implementadas</p>
+                <ul>
+                    <li>Centralização do processo: uma única ferramenta como forma oficial de produção de LDs.</li>
+                    <li>Padronização multimarcas: um jeito único de fazer LDs, com templates configuráveis.</li>
+                    <li>Ferramenta visual, intuitiva e orientada ao usuário, não apenas técnica.</li>
                 </ul>
             </div>
-            <div class="image-wrapper">
-                <img alt="Team collaboration workshop with sticky notes" src="https://images.ctfassets.net/w6r2i5d8q73s/6VnAbuvpiR7wucU4mhDey4/e129ccd44a3163f192c902c4ea0fc891/online_sticky_notes_hero_image_EN_standard_4_3.png?fm=webp&amp;q=75">
+            <div class="video-wrapper" style="max-width: 100%; width: 100%; max-height: 340px;">
+                <iframe src="https://drive.google.com/file/d/1Mr0yz_gA_nUh2cqpuBFUCOYjwUtCh4R8/preview" width="100%" height="320" allow="autoplay" allowfullscreen style="border: none; border-radius: 8px;"></iframe>
             </div>
         </div>
     </div>
 </div><div class="slide-container" id="slide8">
-    <h2 class="slide-title">Destaques SAE Digital</h2>
+    <h2 class="slide-title">Plataforma SAE Digital</h2>
     <div class="content-area">
-        <div class="highlight-grid">
-            <div class="highlight-card">
-                <div class="number">IA</div>
-                <div class="label">Integração Nativa</div>
-                <div class="desc">Pilotos de IA generativa para criação de exercícios e resumo de conteúdo.</div>
+        <div class="two-column">
+            <div>
+                <h3>Resumo do projeto</h3>
+                <p style="margin-bottom: 4px; font-weight: 600;">Contexto e motivação</p>
+                <ul>
+                    <li>Interações digitais dispersas em várias abas e links; necessidade de destacar as principais produções em um só lugar e de unificar para consultores e escolas.</li>
+                </ul>
+                <p style="margin-bottom: 4px; margin-top: 8px; font-weight: 600;">Antes x Depois</p>
+                <ul>
+                    <li><strong>Antes:</strong> conteúdos dispersos e apresentação fragmentada. <strong>Depois:</strong> visão centralizada em um único ambiente.</li>
+                </ul>
+                <p style="margin-bottom: 4px; margin-top: 8px; font-weight: 600;">Impacto gerado</p>
+                <ul>
+                    <li>Potencial para facilitar apresentação, valorizar conteúdos e servir de base para evoluções. Foco em Consultores SAE, times internos e apoio à apresentação do valor digital da marca para escolas.</li>
+                </ul>
+           
             </div>
-            <div class="highlight-card">
-                <div class="number">+30%</div>
-                <div class="label">Eficiência</div>
-                <div class="desc">Redução no tempo de revisão técnica através do novo Dashboard.</div>
-            </div>
-            <div class="highlight-card">
-                <div class="number">RA na web</div>
-                <div class="label">Pioneirismo</div>
-                <div class="desc">Liderança na implementação de RA via web em material didático no Brasil.</div>
+            <div class="image-wrapper" style="max-height: 380px;">
+                <img alt="Plataforma SAE Digital" src="imagens/sae.png" style="width: 100%; height: auto; max-height: 320px; object-fit: contain;">
+                <p style="margin-top: 12px; font-size: 14px; color: #94a3b8; text-align: center;">Plataforma SAE Digital</p>
             </div>
         </div>
     </div>
 </div><div class="slide-container" id="slide9">
-    <h2 class="slide-title">IA e Automação no Core</h2>
+    <h2 class="slide-title">Demonstração</h2>
     <div class="content-area">
         <div class="two-column">
-            <div class="image-wrapper">
-                <img alt="Artificial intelligence concept brain chip" src="https://storage.imrpress.com/jwm/521353/6/1757-448X-24-4-26684/fig1.jpg">
-            </div>
             <div>
-                <h3>Onde estamos aplicando IA?</h3>
-                <ul>
-                    <li><strong>Análise Preditiva:</strong> O Dash de Qualidade futuramente preverá gargalos com base em histórico.</li>
-                    <li><strong>Assistentes de Código:</strong> Uso de Copilot pelo time de dev para acelerar a Plataforma LD.</li>
-                    <li><strong>Geração de Assets:</strong> Testes com IA para criar texturas e modelos base para o Gerenciador RA.</li>
+                <h3>Destaques da plataforma</h3>
+                <p>Principais frentes disponíveis na interface:</p>
+                <ul class="check-only" style="margin-top: 20px; list-style: none; padding-left: 0;">
+                    <li><i class="fa-solid fa-check" style="color:#f97316; margin-right: 10px;"></i> Livros Digitais</li>
+                    <li><i class="fa-solid fa-check" style="color:#f97316; margin-right: 10px;"></i> Objetos Interativos (ODAs)</li>
+                    <li><i class="fa-solid fa-check" style="color:#f97316; margin-right: 10px;"></i> Realidade Aumentada</li>
+                    <li><i class="fa-solid fa-check" style="color:#f97316; margin-right: 10px;"></i> Interface por volumes — acesso ao lado</li>
                 </ul>
-                <p style="margin-top: 20px;">Não é apenas sobre ferramentas, é sobre empoderar o time para focar em tarefas criativas.</p>
             </div>
-        </div>
-    </div>
-</div><div class="slide-container" id="slide10">
-    <h2 class="slide-title">Roadmap de Evolução</h2>
-    <div class="content-area">
-        <div class="timeline-container">
-            <div class="timeline-line"></div>
-            <div class="timeline-items">
-                <div class="t-item">
-                    <h3>Q1</h3>
-                    <p>Expansão da RA na web para todas as coleções.</p>
-                </div>
-                <div class="t-item">
-                    <h3>Q2</h3>
-                    <p>Dash de Qualidade 2.0 com IA preditiva.</p>
-                </div>
-                <div class="t-item">
-                    <h3>Q3</h3>
-                    <p>Integração total da Plataforma LD com novos apps.</p>
-                </div>
-                <div class="t-item">
-                    <h3>Q4</h3>
-                    <p>Hackathon de Inovação Interna (DIA LD).</p>
-                </div>
+            <div class="demo-link-container">
+                <p style="margin-bottom: 8px; font-size: 14px; color: #94a3b8;">Acesse pelo celular:</p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&amp;data=https%3A%2F%2Fnaygracioliarco.github.io%2Fplataforma_SAE%2F" alt="QR Code Plataforma SAE" style="width: 180px; height: 180px; margin-bottom: 16px; background: #fff; padding: 8px; border-radius: 8px;">
+                <a href="https://naygracioliarco.github.io/plataforma_SAE/" target="_blank" rel="noopener noreferrer" class="demo-button">
+                    <i class="fa-solid fa-code" style="margin-right: 10px;"></i> Acessar Plataforma SAE
+                </a>
+                <p style="margin-top: 15px; font-size: 14px; color: #94a3b8;">Plataforma SAE Digital</p>
             </div>
         </div>
     </div>
@@ -1445,7 +1546,7 @@ li {
             Time de ID | Inovação e Desenvolvimento
         </div>
     </div>
-</div><div class="slide-container slide-attributions" id="slide-attributions-1"><h2 class="slide-title">Image Sources</h2><div class="content-area"><ul class="attribution-list"><li class="attribution-list__item"><div class="attribution__thumbnail"><img class="attribution__thumbnail__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOpqHkZwe47iMTEGcvZ1Gipr5BaTqbwHbfnGrHsPDuNXaY_plF1vK0LAWSUcPB" alt="Thumbnail for foundersera.com"></div><div class="attribution__details"><p class="attribution__raw-url">https://foundersera.com/wp-content/uploads/2025/09/AR-in-Education_-Transforming-the-Way-Students-Learn.webp</p><p class="attribution__title">Source: <a href="https://foundersera.com/ar-in-education-transforming-the-way-students-learn/" target="_blank" class="attribution__link">foundersera.com</a></p></div></li><li class="attribution-list__item"><div class="attribution__thumbnail"><img class="attribution__thumbnail__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqWQT9et3j8TCx_GrMpVNhwJLhC4jUQJyZ1fnZDgEBpIG4cHkCOjV2vCm1F3nI" alt="Thumbnail for www.vecteezy.com"></div><div class="attribution__details"><p class="attribution__raw-url">https://static.vecteezy.com/system/resources/previews/060/401/174/non_2x/man-scanning-qr-code-with-smartphone-in-flat-minimal-art-vector.jpg</p><p class="attribution__title">Source: <a href="https://www.vecteezy.com/vector-art/60401174-man-scanning-qr-code-with-smartphone-in-flat-minimal-art" target="_blank" class="attribution__link">www.vecteezy.com</a></p></div></li><li class="attribution-list__item"><div class="attribution__thumbnail"><img class="attribution__thumbnail__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL18NiocrWfDFUPxFmW3UZ2VrWH0r97whrQfGghytalHGRu8yo6RfNlzLzr7LS" alt="Thumbnail for corporater.com"></div><div class="attribution__details"><p class="attribution__raw-url">https://corporater.com/wp-content/uploads/2021/07/kpis-dashboards-and-analytics-software-1a.png</p><p class="attribution__title">Source: <a href="https://corporater.com/solution/kpis-dashboards-and-analytics-software/" target="_blank" class="attribution__link">corporater.com</a></p></div></li><li class="attribution-list__item"><div class="attribution__thumbnail"><img class="attribution__thumbnail__image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSM0NO2M81EfuK0z-y5N3xRWOh5JCpkaakbgtSZ6boci2NXSLdelB9i7g32PtG-" alt="Thumbnail for miro.com"></div><div class="attribution__details"><p class="attribution__raw-url">https://images.ctfassets.net/w6r2i5d8q73s/6VnAbuvpiR7wucU4mhDey4/e129ccd44a3163f192c902c4ea0fc891/online_sticky_notes_hero_image_EN_standard_4_3.png?fm=webp&amp;q=75</p><p class="attribution__title">Source: <a href="https://miro.com/online-sticky-notes/" target="_blank" class="attribution__link">miro.com</a></p></div></li><li class="attribution-list__item"><div class="attribution__thumbnail"><img class="attribution__thumbnail__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF3tut8bX0tAlRxDD0yVoTPlcaEoR-R8bo4oArGpJGsvhwYGKbhO9V1wAeyxqz" alt="Thumbnail for www.imrpress.com"></div><div class="attribution__details"><p class="attribution__raw-url">https://storage.imrpress.com/jwm/521353/6/1757-448X-24-4-26684/fig1.jpg</p><p class="attribution__title">Source: <a href="https://www.imrpress.com/journal/JIN/24/4/10.31083/JIN26684" target="_blank" class="attribution__link">www.imrpress.com</a></p></div></li></ul></div></div></div></div><script>
+</div><script>
 /**
  * Fetches an image blob using a method that attempts to bypass CORS issues
  * by adding 'alr=yes' to the URL and following redirects.
@@ -1548,7 +1649,7 @@ function initializeSlideshowUI() {
         });
         prevButton.disabled = currentSlide === 0;
         nextButton.disabled = currentSlide === slides.length - 1;
-        slideCounter.textContent = `Slide ${currentSlide + 1} of ${slides.length}`;
+        slideCounter.textContent = `Slide ${currentSlide + 1} de ${slides.length}`;
         sessionStorage.setItem(STORAGE_KEY, String(currentSlide));
     }
 
